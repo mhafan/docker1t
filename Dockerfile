@@ -1,3 +1,5 @@
-RUN make
+FROM alpine
 
-CMD ["./heya"]
+RUN apk add --no-cache libstdc++ g++ make git make
+
+RUN make
